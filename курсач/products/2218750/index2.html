@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Halls of Torment</title>
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="icon.png">
+</head>
+
+<body>
+<nav>
+    <div class="nav-inner full-width-limited">
+        <a class="logo" href="/"><img alt="На главную" src="/img/logo-72.svg"/></a>
+        <ul class="nav-links">
+            <li class="nav-link">
+                <a href="/catalog">Каталог</a>
+            </li>
+            <li class="nav-link">
+                <a href="/about-us">О нас</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<main>
+    <div class="product full-width-limited">
+        <img src="/img/games/2218750/kf2.png" class="img-lib" alt="">
+        <img src="/img/games/2218750/header.jpg" class="img-header" alt="">
+        <div class="inner">
+            <h1 class="title-2">Killing Floor 2</h1>
+            <p>Совместная мясорубка на шестерых против мутантов. А теперь и режим «Выживание VS» на 12 игроков — почувствуйте себя в шкуре мутанта!</p>
+            <p>ДАТА ВЫХОДА: 18 ноя. 2016 г.</p>
+            <p>РАЗРАБОТЧИК: <a href="https://store.steampowered.com/franchise/Tripwire"> Tripwire Interactive</a></p>
+            <p>ИЗДАТЕЛЬ: <a href="https://store.steampowered.com/franchise/Tripwire"> Tripwire Interactive</a></p>
+            <div class="price">₽69.99</div>
+            <button class="add-to-cart" class="open-button" onclick="openForm()">
+                <img src="/img/cart-shopping-solid-black.svg" alt=""/>
+                Добавить в корзину
+            </button>
+        </div>
+    </div>
+    <div class="description">
+        <p>В игре KILLING FLOOR 2 игрокам предстоит отправиться в континентальную Европу, где неудачный эксперимент Horzine Biotech вызвал массовую вспышку заражения. Она распространилась с ужасающей скоростью и парализовала Европейский союз. Спустя всего месяц после событий оригинальной игры KILLING FLOOR повсюду распространились образцы-клоны, связь практически отсутствует, цивилизация находится в упадке, правительства пали, а военные силы уничтожены. Жителям Европы пришлось бороться за выживание и самосохранение, а счастливые выжившие ушли в укрытия.</p>
+        <p>Однако не все сдались... Группа гражданских и наемники объединились, чтобы дать отпор вспышке заражения и создать по всей Европе частные военные базы. Игрокам предстоит отправиться в горячие точки, зараженные мутантами, с целью локализовать очаги появления клонов-образцов и уничтожить их.</p>
+        <p>• Кровавое месиво. KILLING FLOOR 2 повышает градус насилия и поднимает жанр на новый уровень достоверности, используя запатентованную кровеносную систему под высоким давлением. Внутренности, отрубленные конечности и кровь затмевают солнечный свет, пока игроки прорубаются через толпы врагов. Но берегитесь! Если вас поймают, то порвут на части вместе с остальной группой.</p>
+    </div>
+    <div>
+            <table>
+              <thead>
+                <tr>
+                    <th>МИНИМАЛЬНЫЕ:</th>
+                    <th>РЕКОМЕНДОВАННЫЕ:</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <th>ОС : Windows 7 64-bit</th>
+                    <th>ОС : Windows 10 64-bit</th>
+                </tr>
+                <tr>
+                    <th>Процессор: Core 2 Duo E8200 2.66GHz</th>
+                    <th>Процессор: Core 2 Quad Q9550 2.83GHz</th>
+                </tr>
+                <tr>
+                    <th>Оперативная память: 3 GB ОЗУ</th>
+                    <th>Оперативная память: 4 GB ОЗУ</th>
+                </tr>
+                <tr>
+                    <th>Видеокарта: NVIDIA GeForce GTS 250</th>
+                    <th>Видеокарта: NVIDIA GeForce GTX 560</th>
+                </tr>
+                <tr>
+                    <th>Место на диске: 80 GB</th>
+                    <th>Место на диске: 100 GB</th>
+                </tr>
+              </tbody>
+            </table>
+    </div>
+    <div id="overlay" class="overlay"></div>
+    <div class="form-popup" id="myForm">
+        <form action="#" class="form-container">
+          <label for="name"><h4>Name</h4></label>
+          <input type="text" placeholder="Your name" name="name" required>
+          <label for="email"><h4>E-mail</h4></label>
+          <input type="text" placeholder="Your email" name="email" required>
+          <label for="tel"><h4>Phone Number</h4></label>
+          <input type="tel" placeholder="Your number" name="tel" required>
+          <button type="submit" class="send">Send</button>
+          <button type="button" onclick="closeForm()" class="close">Close</button>
+        </form>
+      </div>
+</main>
+<footer class="full-width-limited">
+    <div>
+       <p>Связаться с нами можно через:</p>
+       <ul>
+           <li>Номер телефона: <span id="phoneNumber"></span></li>
+           <li>Telegram: <span id="tg"></span></li>
+           <li>E-mail: <span id="email"></span></li>
+       </ul>
+    </div>
+</footer>
+<script>
+    function openForm() {
+    document.getElementById("myForm").style.display = "block";
+    var overlay = document.getElementById("overlay");
+    overlay.style.display = "block";
+    setTimeout(function() {
+        overlay.classList.add("active");
+    }, 10); // Небольшая задержка для активации плавного перехода
+}
+
+function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+    var overlay = document.getElementById("overlay");
+    overlay.classList.remove("active");
+    setTimeout(function() {
+        overlay.style.display = "none";
+    }, 2000); // Совпадает с длительностью перехода
+}
+</script>
+<script>
+    function loadXMLDoc(filename) {
+        return new Promise((resolve, reject) => {
+            let xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    resolve(this.responseXML);
+                }
+            };
+            xhttp.open("GET", filename, true);
+            xhttp.send();
+        });
+    }
+
+    async function displayContactInfo() {
+        const xmlDoc = await loadXMLDoc("contact_info.xml");
+        const phoneNumber = xmlDoc.getElementsByTagName("phoneNumber")[0].textContent;
+        const email = xmlDoc.getElementsByTagName("email")[0].textContent;
+
+        document.getElementById("phoneNumber").textContent = phoneNumber;
+        document.getElementById("email").textContent = email;
+    }
+
+    window.onload = displayContactInfo;
+</script>
+</body>
+
+</html>

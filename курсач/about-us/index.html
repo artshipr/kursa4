@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Главная</title>
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="icon.png">
+</head>
+
+<body>
+<nav>
+    <div class="nav-inner full-width-limited">
+        <a class="logo" href="/"><img alt="На главную" src="/img/logo-72.svg"/></a>
+        <ul class="nav-links">
+            <li class="nav-link">
+                <a href="/catalog">Каталог</a>
+            </li>
+            <li class="nav-link">
+                <a href="/about-us">О нас</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<main>
+    <div class="about-us full-width-limited">
+        <h1 class="title-2">
+            О нас
+        </h1>
+        <div class="history">
+            <p >Наша магазин является дочерней компанией оргазизации "GamerLegion". Данная организация довольно популярна в мире киберспорта. Наиболее известная команда, выступающая от этой организации, по дисциплине "Counter Strike 2". Команда "GamerLegion", с не самым лучшим составом, смогла добраться до полуфинала турнира Major Paris 2022 и по итогу этого турнира заняла 2-ое место. Major является самым крупным и престижным турниром в мире Counter Strike, который проводится только раз в год и имеет призовой фонд свыше 1 млн$. После такого невероятного результата организация "GamerLegion" и решила с части призовых денег расширить свою сферу деятельности, которой и был выбран гейминг.</p>
+            <p>В нашем магазине что-то интересное для себя сможет найти каждый. Как заядлые игроки, так и новички в игровом мире, смогут найти то, что их зацепит.</p>
+        </div>
+        <div>
+         <p style="font-size: large;">Далее будет приведен список компаний с которыми мы сотрудничаем: </p>
+         <ul>
+            <li>Valve</li>
+            <li>Ubisoft</li>
+            <li>Riot Games</li>
+            <li>Rockstar Games</li>
+            <li>Blizzard</li>
+            <li>From Software</li>
+            <li>CD Project Red</li>
+         </ul>
+        </div>
+    </div>
+</main>
+<footer class="full-width-limited">
+    <div>
+       <p>Связаться с нами можно через:</p>
+       <ul>
+           <li>Номер телефона: <span id="phoneNumber"></span></li>
+           <li>Telegram: <span id="tg"></span></li>
+           <li>E-mail: <span id="email"></span></li>
+       </ul>
+    </div>
+</footer>
+<script>
+    function loadXMLDoc(filename) {
+        return new Promise((resolve, reject) => {
+            let xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    resolve(this.responseXML);
+                }
+            };
+            xhttp.open("GET", filename, true);
+            xhttp.send();
+        });
+    }
+
+    async function displayContactInfo() {
+        const xmlDoc = await loadXMLDoc("contact_info.xml");
+        const phoneNumber = xmlDoc.getElementsByTagName("phoneNumber")[0].textContent;
+        const email = xmlDoc.getElementsByTagName("email")[0].textContent;
+
+        document.getElementById("phoneNumber").textContent = phoneNumber;
+        document.getElementById("email").textContent = email;
+    }
+
+    window.onload = displayContactInfo;
+</script>
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Главная</title>
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="icon.png">
+</head>
+<body>
+<nav>
+    <div class="nav-inner full-width-limited">
+        <a class="logo" href="/"><img alt="На главную" src="/img/logo-72.svg"/></a>
+        <ul class="nav-links">
+            <li class="nav-link">
+                <a href="/catalog">Каталог</a>
+            </li>
+            <li class="nav-link">
+                <a href="/about-us">О нас</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<main>
+    <div class="popular full-width-limited">
+        <h1 class="title-2">Каталог</h1>
+        <div>
+            <div class="card-base product-card">
+                <a href="/products/2218750"></a>
+                <img src="/img/games/2218750/header.jpg" alt="Halls of Torment"/>
+                <div class="inner">
+                    <h3 class="title">Halls of Torment</h3>
+                    <div class="price">₽69.99</div>
+                    <button class="add-to-cart">
+                        <img src="/img/cart-shopping-solid-black.svg" alt=""/>
+                        Добавить в корзину
+                    </button>
+                </div>
+            </div>
+            <div class="card-base product-card">
+                <a href="/products/2218750"></a>
+                <img src="/img/games/2218750/header.jpg" alt="Halls of Torment"/>
+                <div class="inner">
+                    <h3 class="title">Halls of Torment</h3>
+                    <div class="price">₽69.99</div>
+                    <button class="add-to-cart">
+                        <img src="/img/cart-shopping-solid-black.svg" alt=""/>
+                        Добавить в корзину
+                    </button>
+                </div>
+            </div>
+            <div class="card-base product-card">
+                <a href="/products/2218750"></a>
+                <img src="/img/games/2218750/header.jpg" alt="Halls of Torment"/>
+                <div class="inner">
+                    <h3 class="title">Halls of Torment</h3>
+                    <div class="price">₽69.99</div>
+                    <button class="add-to-cart">
+                        <img src="/img/cart-shopping-solid-black.svg" alt=""/>
+                        Добавить в корзину
+                    </button>
+                </div>
+            </div>
+            <div class="card-base product-card">
+                <a href="/products/2218750"></a>
+                <img src="/img/games/2218750/header.jpg" alt="Halls of Torment"/>
+                <div class="inner">
+                    <h3 class="title">Halls of Torment</h3>
+                    <div class="price">₽69.99</div>
+                    <button class="add-to-cart">
+                        <img src="/img/cart-shopping-solid-black.svg" alt=""/>
+                        Добавить в корзину
+                    </button>
+                </div>
+            </div>
+            <div class="card-base product-card">
+                <a href="/products/2218750"></a>
+                <img src="/img/games/2218750/header.jpg" alt="Halls of Torment"/>
+                <div class="inner">
+                    <h3 class="title">Halls of Torment</h3>
+                    <div class="price">₽69.99</div>
+                    <button class="add-to-cart">
+                        <img src="/img/cart-shopping-solid-black.svg" alt=""/>
+                        Добавить в корзину
+                    </button>
+                </div>
+            </div>
+            <div class="card-base product-card">
+                <a href="/products/2218750"></a>
+                <img src="/img/games/2218750/header.jpg" alt="Halls of Torment"/>
+                <div class="inner">
+                    <h3 class="title">Halls of Torment</h3>
+                    <div class="price">₽69.99</div>
+                    <button class="add-to-cart">
+                        <img src="/img/cart-shopping-solid-black.svg" alt=""/>
+                        Добавить в корзину
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-nav">
+        <a href="/catalog/2">
+            <img src="/img/prev-small.svg" alt="previous page">
+        </a>
+        <div class="disabled">
+            <img src="/img/next-large.svg" alt="next page">
+        </div>
+    </div>
+</main>
+<footer class="full-width-limited">
+    <div>
+       <p>Связаться с нами можно через:</p>
+       <ul>
+           <li>Номер телефона: <span id="phoneNumber"></span></li>
+           <li>Telegram: <span id="tg"></span></li>
+           <li>E-mail: <span id="email"></span></li>
+       </ul>
+    </div>
+</footer>
+<script>
+    function loadXMLDoc(filename) {
+        return new Promise((resolve, reject) => {
+            let xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    resolve(this.responseXML);
+                }
+            };
+            xhttp.open("GET", filename, true);
+            xhttp.send();
+        });
+    }
+
+    async function displayContactInfo() {
+        const xmlDoc = await loadXMLDoc("contact_info.xml");
+        const phoneNumber = xmlDoc.getElementsByTagName("phoneNumber")[0].textContent;
+        const email = xmlDoc.getElementsByTagName("email")[0].textContent;
+
+        document.getElementById("phoneNumber").textContent = phoneNumber;
+        document.getElementById("email").textContent = email;
+    }
+
+    window.onload = displayContactInfo;
+</script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Halls of Torment</title>
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="icon.png">
+</head>
+
+<body>
+<nav>
+    <div class="nav-inner full-width-limited">
+        <a class="logo" href="/"><img alt="На главную" src="/img/logo-72.svg"/></a>
+        <ul class="nav-links">
+            <li class="nav-link">
+                <a href="/catalog">Каталог</a>
+            </li>
+            <li class="nav-link">
+                <a href="/about-us">О нас</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<main>
+    
+    <div class="product full-width-limited">
+        <img src="/img/games/2218750/ats.png" class="img-lib" alt="">
+        <img src="/img/games/2218750/headerats.jpg" class="img-header" alt="">
+        <div class="inner">
+            <h1 class="title-2">American Truck Simulator</h1>
+            <p>Испытайте легендарные американские грузовики и доставьте различные грузы по солнечной Калифорнии, песчаной Неваде и штату Гранд-Каньон в Аризоне. American Truck Simulator отправит вас в путешествие по захватывающим дух пейзажам и широко известным достопримечательностям штатов.</p>
+            <p>ДАТА ВЫХОДА: 2 фев. 2016 г.</p>
+            <p>РАЗРАБОТЧИК: <a href="https://store.steampowered.com/developer/SCSsoftware"> SCS Software</a></p>
+            <p>ИЗДАТЕЛЬ: <a href="https://store.steampowered.com/developer/SCSsoftware"> SCS Software</a></p>
+            <div class="price">₽69.99</div>
+            <button class="add-to-cart" class="open-button" onclick="openForm()">
+                <img src="/img/cart-shopping-solid-black.svg" alt=""/>
+                Добавить в корзину
+            </button>
+        </div>
+    </div>
+    <div class="description">
+        <p>Испытайте легендарные американские грузовики и доставьте различные грузы по солнечной Калифорнии, песчаной Неваде и штату Гранд-Каньон в Аризоне. American Truck Simulator отправит вас в путешествие по захватывающим дух пейзажам и широко известным достопримечательностям Штатов.</p>
+        <p>Игровая механика основана на успешной модели Euro Truck Simulator 2 и дополнена новыми возможностями, создавая самый захватывающий игровой опыт от SCS Software.</p>
+        <p>В American Truck Simulator вы окажетесь в роли наемного водителя на местном рынке грузоперевозок, сможете стать владельцем-оператором и создать одну из крупнейших транспортных компаний в Соединенных Штатах.</p>
+    </div>
+    <div>
+            <table>
+              <thead>
+                <tr>
+                    <th>МИНИМАЛЬНЫЕ:</th>
+                    <th>РЕКОМЕНДОВАННЫЕ:</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <th>ОС : Windows 7 64-bit</th>
+                    <th>ОС : Windows 7/8.1/10 64-bit</th>
+                </tr>
+                <tr>
+                    <th>Процессор: Intel Core i5-6400</th>
+                    <th>Процессор: Intel Core i5-9600</th>
+                </tr>
+                <tr>
+                    <th>Оперативная память: 8 GB ОЗУ</th>
+                    <th>Оперативная память: 12 GB ОЗУ</th>
+                </tr>
+                <tr>
+                    <th>Видеокарта: NVIDIA GeForce GTX 660</th>
+                    <th>Видеокарта: NVIDIA GeForce GTX 1660</th>
+                </tr>
+                <tr>
+                    <th>Место на диске: 25 GB</th>
+                    <th>Место на диске: 25 GB</th>
+                </tr>
+              </tbody>
+            </table>
+    </div>
+    <div id="overlay" class="overlay"></div>
+    <div class="form-popup" id="myForm">
+        <form action="#" class="form-container">
+          <label for="name"><h4>Name</h4></label>
+          <input type="text" placeholder="Your name" name="name" required>
+          <label for="email"><h4>E-mail</h4></label>
+          <input type="text" placeholder="Your email" name="email" required>
+          <label for="tel"><h4>Phone Number</h4></label>
+          <input type="tel" placeholder="Your number" name="tel" required>
+          <button type="submit" class="send">Send</button>
+          <button type="button" onclick="closeForm()" class="close">Close</button>
+        </form>
+      </div>
+</main>
+<footer class="full-width-limited">
+    <div>
+       <p>Связаться с нами можно через:</p>
+       <ul>
+           <li>Номер телефона: <span id="phoneNumber"></span></li>
+           <li>Telegram: <span id="tg"></span></li>
+           <li>E-mail: <span id="email"></span></li>
+       </ul>
+    </div>
+</footer>
+<script>
+    function openForm() {
+    document.getElementById("myForm").style.display = "block";
+    var overlay = document.getElementById("overlay");
+    overlay.style.display = "block";
+    setTimeout(function() {
+        overlay.classList.add("active");
+    }, 10); // Небольшая задержка для активации плавного перехода
+}
+
+function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+    var overlay = document.getElementById("overlay");
+    overlay.classList.remove("active");
+    setTimeout(function() {
+        overlay.style.display = "none";
+    }, 2000); // Совпадает с длительностью перехода
+}
+</script>
+<script>
+    function loadXMLDoc(filename) {
+        return new Promise((resolve, reject) => {
+            let xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    resolve(this.responseXML);
+                }
+            };
+            xhttp.open("GET", filename, true);
+            xhttp.send();
+        });
+    }
+
+    async function displayContactInfo() {
+        const xmlDoc = await loadXMLDoc("contact_info.xml");
+        const phoneNumber = xmlDoc.getElementsByTagName("phoneNumber")[0].textContent;
+        const email = xmlDoc.getElementsByTagName("email")[0].textContent;
+
+        document.getElementById("phoneNumber").textContent = phoneNumber;
+        document.getElementById("email").textContent = email;
+    }
+
+    window.onload = displayContactInfo;
+</script>
+</body>
+
+</html>

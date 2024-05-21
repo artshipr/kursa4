@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Halls of Torment</title>
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="icon.png">
+</head>
+
+<body>
+<nav>
+    <div class="nav-inner full-width-limited">
+        <a class="logo" href="/"><img alt="На главную" src="/img/logo-72.svg"/></a>
+        <ul class="nav-links">
+            <li class="nav-link">
+                <a href="/catalog">Каталог</a>
+            </li>
+            <li class="nav-link">
+                <a href="/about-us">О нас</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<main>
+    <div class="product full-width-limited">
+        <img src="/img/games/2218750/er.png" class="img-lib" alt="">
+        <img src="/img/games/2218750/headerer.jpg" class="img-header" alt="">
+        <div class="inner">
+            <h1 class="title-2">Elden Ring</h1>
+            <p>НОВЫЙ ФЭНТЕЗИЙНЫЙ РОЛЕВОЙ БОЕВИК. Восстань, погасшая душа! Междуземье ждёт своего повелителя. Пусть благодать приведёт тебя к Кольцу Элден.</p>
+            <p>ДАТА ВЫХОДА: 25 фев. 2022 г.</p>
+            <p>РАЗРАБОТЧИК: <a href="https://store.steampowered.com/developer/BANDAINAMCO"> FromSoftware Inc.</a></p>
+            <p>ИЗДАТЕЛЬ: <a href="https://store.steampowered.com/developer/BANDAINAMCO"> FromSoftware Inc., Bandai Namco Entertainment</a></p>
+            <div class="price">₽69.99</div>
+            <button class="add-to-cart" class="open-button" onclick="openForm()">
+                <img src="/img/cart-shopping-solid-black.svg" alt=""/>
+                Добавить в корзину
+            </button>
+        </div>
+    </div>
+</div>
+<div class="description">
+    <p>НОВЫЙ ФЭНТЕЗИЙНЫЙ РОЛЕВОЙ БОЕВИК.
+        Восстань, погасшая душа! Междуземье ждёт своего повелителя. Пусть благодать приведёт тебя к Кольцу Элден.</p>
+    <p>• Огромный захватывающий мир
+        Огромный мир с открытыми полями, множеством ситуаций и гигантскими подземельями, где сложные трёхмерные конструкции сочетаются воедино. Путешествуйте, преодолевайте смертельные опасности и радуйтесь успехам.</p>
+    <p>• Создайте своего персонажа
+        Вы можете не только изменить внешность персонажа, но также комбинировать оружие, броню и предметы. Развивайте персонажа по своему вкусу. Наращивайте мышцы или постигайте таинства магии.</p>
+    <p>• Эпическая драма, выросшая из мифа
+        Многослойная история, разбитая на фрагменты. Эпическая драма, в которой мысли персонажей пересекаются в Междуземье.</p>
+    <p>• Уникальный сетевой режим, приближающий вас к другим игрокам
+        Помимо многопользовательского режима, в котором вы напрямую подключаетесь к другим игрокам и путешествуете вместе, есть асинхронный сетевой режим, позволяющий ощутить присутствие других игроков.</p>
+</div>
+<div>
+        <table>
+          <thead>
+            <tr>
+                <th>МИНИМАЛЬНЫЕ:</th>
+                <th>РЕКОМЕНДОВАННЫЕ:</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <th>ОС : Windows 10</th>
+                <th>ОС : Windows 10/11</th>
+            </tr>
+            <tr>
+                <th>Процессор: INTEL CORE I5-8400</th>
+                <th>Процессор: INTEL CORE I7-8700K</th>
+            </tr>
+            <tr>
+                <th>Оперативная память: 12 GB ОЗУ</th>
+                <th>Оперативная память: 16 GB ОЗУ</th>
+            </tr>
+            <tr>
+                <th>Видеокарта: NVIDIA GEFORCE GTX 1060 3 GB</th>
+                <th>Видеокарта: NVIDIA GEFORCE GTX 1070 8 GB</th>
+            </tr>
+            <tr>
+                <th>Место на диске: 60 GB</th>
+                <th>Место на диске: 60 GB</th>
+            </tr>
+          </tbody>
+        </table>
+</div>
+    <div id="overlay" class="overlay"></div>
+    <div class="form-popup" id="myForm">
+        <form action="#" class="form-container">
+          <label for="name"><h4>Name</h4></label>
+          <input type="text" placeholder="Your name" name="name" required>
+          <label for="email"><h4>E-mail</h4></label>
+          <input type="text" placeholder="Your email" name="email" required>
+          <label for="tel"><h4>Phone Number</h4></label>
+          <input type="tel" placeholder="Your number" name="tel" required>
+          <button type="submit" class="send">Send</button>
+          <button type="button" onclick="closeForm()" class="close">Close</button>
+        </form>
+      </div>
+</main>
+<footer class="full-width-limited">
+    <div>
+       <p>Связаться с нами можно через:</p>
+       <ul>
+           <li>Номер телефона: <span id="phoneNumber"></span></li>
+           <li>Telegram: <span id="tg"></span></li>
+           <li>E-mail: <span id="email"></span></li>
+       </ul>
+    </div>
+</footer>
+<script>
+    function openForm() {
+    document.getElementById("myForm").style.display = "block";
+    var overlay = document.getElementById("overlay");
+    overlay.style.display = "block";
+    setTimeout(function() {
+        overlay.classList.add("active");
+    }, 10);
+}
+
+function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+    var overlay = document.getElementById("overlay");
+    overlay.classList.remove("active");
+    setTimeout(function() {
+        overlay.style.display = "none";
+    }, 2000);
+}
+</script>
+<script>
+    function loadXMLDoc(contact_info) {
+        return new Promise((resolve, reject) => {
+            let xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    resolve(this.responseXML);
+                }
+            };
+            xhttp.open("GET", "../contact_info.xml", true);
+            xhttp.send();
+        });
+    }
+
+    async function displayContactInfo() {
+        const xmlDoc = await loadXMLDoc("contact_info.xml");
+        const phoneNumber = xmlDoc.getElementsByTagName("phoneNumber")[0].textContent;
+        const email = xmlDoc.getElementsByTagName("email")[0].textContent;
+
+        document.getElementById("phoneNumber").textContent = phoneNumber;
+        document.getElementById("email").textContent = email;
+    }
+
+    window.onload = displayContactInfo;
+</script>
+</body>
+
+</html>

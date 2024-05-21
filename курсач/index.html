@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Главная</title>
+    <link rel="stylesheet" href="https://unpkg.com/@glidejs/glide@3.6.0/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="icon.png">
+</head>
+
+<body>
+<nav>
+    <div class="nav-inner full-width-limited">
+        <a class="logo" href="/"><img alt="На главную" src="/img/logo-72.svg"/></a>
+        <ul class="nav-links">
+            <li class="nav-link">
+                <a href="/catalog">Каталог</a>
+            </li>
+            <li class="nav-link">
+                <a href="/about-us">О нас</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<main>
+    <h1>Наши главные компании-партнеры:</h1>
+    <div class="slideshow-container">    
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="img/ubisoft.avif" alt="Природа" style="width:100%">
+          <div class="text">Ubisoft</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="img/rockstarGames.webp" alt="Лес" style="width:100%">
+          <div class="text">Rockstar Games</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="img/blizzard.avif" alt="Горы" style="width:100%">
+          <div class="text">Blizzard</div>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+        </div>
+    <div class="popular full-width-limited">
+        <h2 class="title-2">Популярные</h2>
+        <div>
+            <div class="card-base product-card">
+                <a href="/products/2218750/index.html"></a>
+                <img src="/img/games/2218750/headerer.jpg" alt="Halls of Torment"/>
+                <div class="inner">
+                    <h3 class="title">Elden Ring</h3>
+                    <div class="price">₽69.99</div>
+                    <button class="add-to-cart" class="open-button" onclick="openForm()">
+                        <img src="/img/cart-shopping-solid-black.svg" alt=""/>
+                        Добавить в корзину
+                    </button>
+                </div>
+            </div>
+            <div class="card-base product-card">
+                <a href="/products/2218750/index1.html"></a>
+                <img src="/img/games/2218750/headerats.jpg" alt="Halls of Torment"/>
+                <div class="inner">
+                    <h3 class="title">American Truck Simulator</h3>
+                    <div class="price">₽69.99</div>
+                    <button class="add-to-cart" class="open-button" onclick="openForm()">
+                        <img src="/img/cart-shopping-solid-black.svg" alt=""/>
+                        Добавить в корзину
+                    </button>
+                </div>
+            </div>
+            <div class="card-base product-card">
+                <a href="/products/2218750/index2.html"></a>
+                <img src="/img/games/2218750/headerkf2.jpg" alt="Halls of Torment"/>
+                <div class="inner">
+                    <h3 class="title">Killing Floor 2</h3>
+                    <div class="price">₽69.99</div>
+                    <button class="add-to-cart" class="open-button" onclick="openForm()">
+                        <img src="/img/cart-shopping-solid-black.svg" alt=""/>
+                        Добавить в корзину
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="news full-width-limited">
+        <h2 class="title-2">Новости</h2>
+        <div id="glide-news" class="glide">
+            <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                    <li class="glide__slide card-base">
+                        <h3>Кодзима: Death Stranding 2 пробудет на этапе полировки примерно год</h3>
+                        <p>
+                            Death Stranding 2: On the Beach стартует когда-то в 2025 году эксклюзивно на PlayStation 5. В начале мая Кодзима чуть ли не с фанфарами встретил у себя в студии Нормана Ридуса (Norman Reedus) — своего хорошего друга и исполнителя главной роли в Death Stranding.
+                        </p>
+                    </li>
+                    <li class="glide__slide card-base">
+                        <h3>Ghost of Tsushima стала второй по онлайну среди релизов PlayStation в Steam. Выше только Helldivers 2</h3>
+                        <p>
+                            Хотя Ghost of Tsushima для Steam недоступна на 180 территориях, игра всё равно стала одним из самых популярных релизов PlayStation в магазине Valve: теперь она уступает только феномену, случившемуся с Helldivers 2.
+                        </p>
+                    </li>
+                    <li class="glide__slide card-base">
+                        <h3>2K скоро анонсирует продолжение «одной из любимых франшиз». BioShock? Mafia?</h3>
+                        <p>
+                            Организаторы Summer Game Fest начинают разогрев перед церемонией открытия: они объявили, что на их шоу 2K Games представит «следующую часть одной из самых больших и любимых франшиз» издательства.
+                            Что это может быть?
+                        </p>
+                    </li>
+                </ul>
+                <div class="glide__arrows" data-glide-el="controls">
+                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+                        <img src="/img/prev-arrow.svg" alt="previous">
+                    </button>
+                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+                        <img src="/img/next-arrow.svg" alt="previous">
+                    </button>
+                </div>
+            </div>
+            <div class="glide__bullets" data-glide-el="controls[nav]">
+                <button class="glide__bullet" data-glide-dir="=0"></button>
+                <button class="glide__bullet" data-glide-dir="=1"></button>
+                <button class="glide__bullet" data-glide-dir="=2"></button>
+            </div>
+        </div>
+    </div>
+    <div class="advantages full-width-limited">
+        <div class="advantage card-base">
+            <img src="/img/delivery-movement-svgrepo-com.svg" alt="">
+            <p>Быстрая доставка</p>
+        </div>
+        <div class="advantage card-base">
+            <img src="/img/operator-customer-service-svgrepo-com.svg" alt="">
+            <p>Круглосуточная поддержка</p>
+        </div>
+        <div class="advantage card-base">
+            <img src="/img/invoice-bill-svgrepo-com.svg" alt="">
+            <p>Только лицензионная продукция</p>
+        </div>
+    </div>
+    <div id="overlay" class="overlay"></div>
+    <div class="form-popup" id="myForm">
+        <form action="#" class="form-container">
+          <label for="name"><h4>Name</h4></label>
+          <input type="text" placeholder="Your name" name="name" required>
+          <label for="email"><h4>E-mail</h4></label>
+          <input type="text" placeholder="Your email" name="email" required>
+          <label for="tel"><h4>Phone Number</h4></label>
+          <input type="tel" placeholder="Your number" name="tel" required>
+          <button type="submit" class="send">Send</button>
+          <button type="button" onclick="closeForm()" class="close">Close</button>
+        </form>
+      </div>
+</main>
+<footer class="full-width-limited">
+    <div>
+       <p>Связаться с нами можно через:</p>
+       <ul>
+           <li>Номер телефона: <span id="phoneNumber"></span></li>
+           <li>Telegram: <span id="tg"></span></li>
+           <li>E-mail: <span id="email"></span></li>
+       </ul>
+    </div>
+</footer>
+<script>
+    function openForm() {
+    document.getElementById("myForm").style.display = "block";
+    var overlay = document.getElementById("overlay");
+    overlay.style.display = "block";
+    setTimeout(function() {
+        overlay.classList.add("active");
+    }, 10); // Небольшая задержка для активации плавного перехода
+}
+
+function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+    var overlay = document.getElementById("overlay");
+    overlay.classList.remove("active");
+    setTimeout(function() {
+        overlay.style.display = "none";
+    }, 2000); // Совпадает с длительностью перехода
+}
+</script>
+<script>
+    function loadXMLDoc(filename) {
+    return new Promise((resolve, reject) => {
+        let xhttp = new XMLHttpRequest();
+        xhttp.onload = function() {
+            if (this.status == 200) {
+                resolve(this.responseXML);
+            } else {
+                reject(new Error(`Failed to load XML file: ${this.status} ${this.statusText}`));
+            }
+        };
+        xhttp.onerror = function() {
+            reject(new Error('Network error'));
+        };
+        xhttp.open("GET", filename, true);
+        xhttp.send();
+    });
+}
+
+async function displayContactInfo() {
+    try {
+        const xmlDoc = await loadXMLDoc("contact_info.xml");
+        const phoneNumber = xmlDoc.getElementsByTagName("phoneNumber")[0].textContent;
+        const email = xmlDoc.getElementsByTagName("email")[0].textContent;
+        const tg = xmlDoc.getElementsByTagName("tg")[0].textContent;
+
+        document.getElementById("phoneNumber").textContent = phoneNumber;
+        document.getElementById("email").textContent = email;
+        document.getElementById("tg").textContent = tg;
+    } catch (error) {
+        console.error('Error loading contact info:', error);
+        document.getElementById("phoneNumber").textContent = 'Error loading phone number';
+        document.getElementById("email").textContent = 'Error loading email';
+        document.getElementById("tg").textContent = 'Error loading tg';
+    }
+}
+
+window.onload = displayContactInfo;
+
+</script>
+<script src="https://unpkg.com/@glidejs/glide@3.6.0/dist/glide.min.js"></script>
+<script lang="js">
+    const news = new Glide("#glide-news", {
+        breakpoints: {
+            [Number.MAX_SAFE_INTEGER]: {
+                perView: 2,
+            },
+            640: {
+                perView: 1,
+            },
+        },
+        gap: 16
+    })
+
+    news.mount()
+
+</script>
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      slides[slideIndex-1].style.display = "block";  
+    }
+    </script>
+</body>
+
+</html>
